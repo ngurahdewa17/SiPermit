@@ -32,8 +32,7 @@
                                             <form class="d-flex" role="search">
                                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                                 <button class="btn btn-outline-success" type="submit">Search</button>
-                                            </form>
-                                            
+                                            </form>          
                                         </div>
                                     </div>
                                     <br>
@@ -83,7 +82,6 @@
                                                 <td><img src="{{ asset('storage/images/'.$dataP->image) }}" width="70" height="100" class="img img-responsive"/></td>
                                                 @if($dataP->approve == 0)               
                                                     <td class="table-warning text-warning">
-                                                
                                                         <div class="form-group">
                                                             <a href="/preview/{{$dataP->id}}/cek" class="btn btn-success" style="width: 220px;">DOWNLOAD</a>
                                                             {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}
@@ -91,7 +89,6 @@
                                                         <div class="form-group">
                                                             <a href="/tampil_verifikasi" class="btn btn-success" style="width: 220px;">UPLOAD/EDIT VERIFIKASI DATA</a>
                                                             {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}
-                                                            
                                                         </div>
                                                         <div class="form-group">
                                                             <a href="#" class="btn btn-warning" style="width: 220px;">PENDING</a>
@@ -102,7 +99,6 @@
                                                         <div class="form-group">
                                                             <a href="/preview/{{$dataP->id}}/cek" class="btn btn-success" style="width: 220px;">DOWNLOAD</a>
                                                             {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}
-                                                            
                                                         </div>
                                                         <div class="form-group">
                                                             <a href="#" class="btn btn-success" style="width: 220px;">APPROVED</a>
@@ -111,13 +107,13 @@
                                                 @elseif($dataP->approve == 3)
                                                     <td>
                                                         <div class="form-group">
-                                                           
-                                                            <a href="/formdataPelaksana/{{$dataP->id}}/cek" class="btn btn-success" style="width: 220px;">TAMBAH PELAKSANA</a>
+                                                            <a href="/form_editPengajuan/{{$dataP->id}}/cek" class="btn btn-success" style="width: 220px;">EDIT PENGAJUAN</a>
                                                             {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}
                                                         </div>
-                                                    </td>
-        
-                                                    <td class="table-warning text-warning">
+                                                        <div class="form-group"> 
+                                                            <a href="/formdataPelaksana/{{$dataP->id}}/cek" class="btn btn-success" style="width: 220px;">TAMBAH / EDIT PELAKSANA</a>
+                                                            {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}
+                                                        </div>
                                                         <div class="form-group">
                                                             <a href="#" class="btn btn-warning" style="width: 220px;">MENUNGGU KONFIRMASI</a>
                                                         </div>
@@ -128,7 +124,6 @@
                                                             <a href="#" class="btn btn-warning" style="width: 220px;">MENUNGGU KONFIRMASI</a>
                                                         </div>
                                                     </td>
-                                             
                                                 @else
                                                     <td class="table-danger text-danger">
                                                         <div class="form-group">
@@ -156,10 +151,4 @@
             </div>
         </section>    
     </div>
-
-  
-        
-        
-   
-    
 @endsection

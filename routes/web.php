@@ -37,7 +37,10 @@ Route::get('/tampil_pengajuan',[pengajuanController::class, 'tampilPengajuan']);
 Route::get('/form_pengajuan',[pengajuanController::class, 'form_pengajuan']);
 Route::post('/store_pengajuan',[pengajuanController::class, 'store_pengajuan']);
 Route::get('/formdataPelaksana/{id}/cek', [pengajuanController::class, 'formPelaksana']);
-Route::post('/store_pelaksana/{id}/cek', [pengajuanCotnroller::class], 'storePelaksan');
+Route::post('/formeditPelaksana/{id}/store',[pengajuanController::class, 'formEditPelaksana']);
+Route::post('/store_pelaksana', [pengajuanController::class, 'storePelaksana']);
+Route::get('/form_editPengajuan/{id}/cek', [pengajuanController::class, 'formEditPengajuan']);
+Route::put('/store_editPengajuan/{id}/store', [pengajuanController::class, 'storeEditPengajuan']);
 //PRINT TEMPLATE
 // Route::get('/print_template',[pengajuanController::class,'printTemplate']);
 Route::get('/preview/{id}/cek',[pengajuanController::class, 'downloadFile']);
@@ -55,7 +58,6 @@ Route::get('/convert',[pengajuanController::class,'convert_Form']);
 
 Route::get('/testingTampil',[pengajuanController::class,'testingConvert']);
 Route::get('/testingView',[pengajuanController::class,'testingView']);
-
 Route::get('/testing', [testing::class, 'dataTesting1']);
 
 //Verifikasi

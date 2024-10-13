@@ -19,4 +19,9 @@ class dataPengajuan extends Model
     {
         return $this->hasOne(Verifikasi::class);
     }
+
+    public function pelaksana()
+    {
+        return $this->hasMany(Pelaksana::class);
+    }
 }

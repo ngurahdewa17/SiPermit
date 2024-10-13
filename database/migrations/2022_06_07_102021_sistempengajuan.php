@@ -16,7 +16,7 @@ class Sistempengajuan extends Migration
         Schema::create('sistem_pengajuans', function (Blueprint $table) {
             $table->id();
             $table->string('namaMitra');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('namaPerusahaan');
             $table->string('pekerjaan');
             $table->string('noSP2KPA')->unique;

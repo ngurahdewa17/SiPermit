@@ -11,6 +11,11 @@ class Pelaksana extends Model
     protected $table ="data_pelaksanas";
     protected $guarded = ['id'];
     protected $fillable = [
-        'id_DataPengajuan','namaPelaksana','noTlp'
+        'idDataPengajuan','namaPelaksana','noTlp'
     ];
+
+    public function pengajuancontroller()
+    {
+        return $this->belongsTo(dataPengajuan::class);
+    }
 }

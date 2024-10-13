@@ -101,8 +101,7 @@
                                                             <div class="col-lg-12 col-md-12 col-sm-12">
                                                                 <div class="form-group">
                                                                     <a href="/downloadfile/{{$dataV->id}}/cek" class="btn btn-warning" style="width: 150px;">DOWNLOAD</a>
-                                                                    {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}
-                                                                    
+                                                                    {{-- <a href="/preview/cek" class="btn btn-success">DOWNLOAD</a> --}}              
                                                                 </div>
                                                             </div>
                                                    

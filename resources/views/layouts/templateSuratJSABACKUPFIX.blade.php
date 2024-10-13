@@ -234,6 +234,7 @@
                 <div class="bordert  center">
                     <table class=" " width="100%">
                         <thead>
+                           
                             <tr>
                                 <th>
                                     <img src="{{ public_path('iconpluskompresfix.jpg') }}" style="width:50px; height:50px"  />
@@ -563,6 +564,7 @@
                         </tbody>
                     </table> 
                 </div>
+        
                 <br>
                 <div class="kontent">
                     <h5 style="margin-bottom:5px; ">PELAKSANA PEKERJAAN :</h5>
@@ -570,13 +572,32 @@
                         <div class="kiri">
                             <div class="kontent" >
                                 <table class="pelaksanaPekerjaan" width="50%" rules="all" >
-                                    @foreach($dataPelaksana as $dataP)
                                     <tr class="">
-                                        <th width="20" align="left"><h5>{{$no++}}</h5></th>
+                                        <th width="20" align="left"><h5>1</h5></th>
                                         <th width="10"><h5> :</h5> </th>
-                                        <th align="left"> <h5>{{ $dataP->namaPelaksana }}</h5></th>
+                                        <th align="left"> <h5>Adi</h5></th>
                                     </tr> 
-                                    @endforeach
+                                    <tr class="">
+                                        <th width="20" align="left"><h5>2</h5></th>
+                                        <th width="10"><h5> : </h5></th>
+                                        <th align="left"><h5> Dede </h5></th> 
+                                    </tr>
+                                    <tr class="">
+                                        <th width="20" align="left"><h5>3</h5></th>
+                                        <th width="10"><h5> : </h5></th>
+                                        <th align="left"><h5>Dodo</h5></th>      
+                                    </tr>
+                                    <tr class="">
+                                        <th width="20" align="left"><h5>4</h5></th>
+                                        <th width="10"><h5> : </h5></th>
+                                        <th align="left"><h5> Gogo </h5></th> 
+                                    </tr>
+                                    <tr class="">
+                                        <th width="20" align="left"><h5>5</h5></th>
+                                        <th width="10"><h5> : </h5></th>
+                                        <th align="left"><h5>Wowo</h5></th>  
+                                    </tr>
+                    
                                 </table> 
                             </div>
                         </div>

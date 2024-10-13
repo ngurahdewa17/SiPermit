@@ -23,7 +23,7 @@ class verifikasiController extends Controller
             'imageVerifikasi' => 'required|mimes:jpeg,png,jpg,gif,svg,pdf|max:1024',
         ]);
        
-
+      
         $fileName = time().$request->file('imageVerifikasi')->hashName();
         $path = $request->file('imageVerifikasi')->storeAs('verifikasi', $fileName, 'public');
         $requestData["imageVerifikasi"] = '/storage/'.$path;
@@ -35,9 +35,7 @@ class verifikasiController extends Controller
             'imageVerifikasi' => $fileName,
         ]);
         return redirect('/tampil_verifikasi')->with('success','Data Berhasil Disimpan!');
-
     }
-
     public function tampilVerifikasi()
     {
         $dataVerifikasi = Verifikasi::latest()->paginate(5);
@@ -168,7 +166,6 @@ class verifikasiController extends Controller
             'namaVerifikasi' => 'required',
             'imageVerifikasi' => 'required|mimes:jpeg,png,jpg,gif,svg,pdf|max:1024',
         ]);
-
         $fileName = time().$request->file('imageVerifikasi')->hashName();
         $path = $request->file('imageVerifikasi')->storeAs('verifikasi', $fileName, 'public');
         $requestData["imageVerifikasi"] = '/storage/'.$path;
